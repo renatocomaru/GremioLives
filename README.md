@@ -1,27 +1,27 @@
-# Grêmio Futebol Porto-Alegrense Lives
+# GremioLives
+Welcome to GremioLives, a web application for Gremio Futbol Porto-Alegrense fans to stay updated with the latest live events and streams. This project is built using Angular 9 and Material Design components, providing a user-friendly interface and seamless navigation.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.7.
+## Features
+- Browse upcoming live events
+- Watch previous live streams
+- Get details about each event, including the channel name and date
+- Responsive design that works on various devices
 
-## Development server
+## Getting Started
+To get started with GremioLives, clone the repository and follow the instructions below:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+1. Install dependencies:
+```npm install```
+2. Clone Back-end project:
+```git clone git@github.com:MichelliBrito/agendalive.git```
+3. Create your own local database with MongoDB
+4. Open your browser and navigate to http://localhost:4200/
 
-## Code scaffolding
+## Contributing
+Contributions are welcome! Please feel free to submit issues or create pull requests for enhancements and bug fixes.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## License
+This project is licensed under the MIT License.
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## About Me
+I'm a passionate web developer with experience in Angular and Material Design. I love creating user-friendly applications and contributing to open-source projects. GremioLives is a project close to my heart, as I'm a big fan of the Gremio football club.
