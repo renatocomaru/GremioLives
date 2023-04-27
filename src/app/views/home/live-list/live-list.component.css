@@ -1,0 +1,51 @@
+.tabContent {
+  padding-top: 40px;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+.flexDiv {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(32%, 1fr));
+  grid-gap: 16px;
+  padding: 2%;
+}
+
+@media (max-width: 767px) {
+  .flexDiv {
+    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .flexDiv {
+    grid-template-columns: repeat(auto-fill, minmax(48%, 1fr));
+  }
+}
+
+.grid-item {
+  margin: 0.5% !important;
+}
+
+.mat-card-live {
+  border: 1px;
+  border-radius: 4px 3px 6px / 2px 4px;
+  padding-top: 15px;
+  padding-left: 0%;
+  padding-right: 0%;
+  padding-bottom: 0%;
+  margin: 5px;
+  max-width: 100%;
+}
+
+.mat-card-title-live {
+  padding-left: 10px;
+  padding-top: 0px;
+  padding-right: 15px;
+  margin-bottom: 0px !important;
+  min-height: 70px;
+}
+
+.mat-card-title-live p {
+  margin-bottom: 0px;
+}

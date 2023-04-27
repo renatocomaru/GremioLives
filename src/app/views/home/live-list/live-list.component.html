@@ -1,0 +1,50 @@
+<mat-tab-group class="tabContent" mat-stretch-tabs="false" mat-align-tabs="start">
+  <mat-tab label="PRÓXIMAS">
+    <div class="flexDiv">
+      <ng-container *ngFor="let live of livesNext" class="grid-item">
+        <mat-card class="mat-card-live">
+          <mat-card-title class="mat-card-title-live">
+            <div class="row">
+              <p>
+                <span style="font-size: 1rem;" fxFlex="70" fxLayoutAlign="start center">{{live.liveName}}</span>
+                <span fxFlex></span>
+                <span style="font-size: 0.7rem;" fxFlex="25" fxLayoutAlign="end center">{{live.liveDate}}</span>
+              </p>
+              <p style="font-size: 0.7rem;">
+                Canal:<span>{{live.channelName}}</span>
+              </p>
+            </div>
+          </mat-card-title>
+          <mat-card-content fxLayoutAlign="center start">
+            <iFrame width="560" height="315" [src]="live.urlSafe" frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iFrame>
+          </mat-card-content>
+        </mat-card>
+      </ng-container>
+    </div>
+  </mat-tab>
+  <mat-tab label="REALIZADAS">
+    <div class="flexDiv">
+      <ng-container *ngFor="let live of livesPrevious" class="grid-item">
+        <mat-card class="mat-card-live">
+          <mat-card-title class="mat-card-title-live">
+            <div class="row">
+              <p>
+                <span style="font-size: 1rem;" fxFlex="70" fxLayoutAlign="start center">{{live.liveName}}</span>
+                <span fxFlex></span>
+                <span style="font-size: 0.7rem;" fxFlex="25" fxLayoutAlign="end center">{{live.liveDate}}</span>
+              </p>
+              <p style="font-size: 0.7rem;">
+                Canal:<span>{{live.channelName}}</span>
+              </p>
+            </div>
+          </mat-card-title>
+          <mat-card-content fxLayoutAlign="center start">
+            <iFrame width="560" height="315" [src]="live.urlSafe" frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iFrame>
+          </mat-card-content>
+        </mat-card>
+      </ng-container>
+    </div>
+  </mat-tab>
+</mat-tab-group>

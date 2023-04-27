@@ -1,0 +1,62 @@
+.titleHeader {
+  font-size: 1.5em;
+}
+.mat-icon {
+  color: blue;
+}
+.example-spacer {
+  flex: 1 1 auto;
+}
+.g {
+  color: blue;
+}
+.r {
+  color: black;
+}
+.e {
+  color: blue;
+}
+.m {
+  color: black;
+}
+.i {
+  color: blue;
+}
+.o {
+  color: black;
+}
+
+.custom-icon {
+  width: 35px;
+  height: 35px;
+}
+
+.title-container {
+  display: flex;
+  align-items: center;
+}
+
+.home-title {
+  margin-right: 0.5rem;
+}
+
+.page-wrapper {
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 255, 0.2),
+    rgba(0, 0, 0, 0.2),
+    rgba(255, 255, 255, 0.2)
+  );
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.image-wrapper {
+  background-image: url("src/assets/images/gremiobg.png");
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-size: 40%;
+  background-position: center center;
+  background-attachment: fixed;
+}
