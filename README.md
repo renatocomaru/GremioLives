@@ -1,5 +1,5 @@
 # GremioLives
-Welcome to GremioLives, a web application for Gremio Futbol Porto-Alegrense fans to stay updated with the latest live events and streams. This project is built using Angular 9 and Material Design components, providing a user-friendly interface and seamless navigation.
+Welcome to GremioLives, a web application for Gremio Futbol Porto-Alegrense fans to stay updated with the latest live events and streams. This project is built using Angular 9, Spring Boot and Material Design components, providing a user-friendly interface and seamless navigation.
 
 ## Features
 - Browse upcoming live events
