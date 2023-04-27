@@ -2,28 +2,28 @@
   font-size: 1.5em;
 }
 .mat-icon {
-  color: blue;
+  color: #0d80bf;
 }
 .example-spacer {
   flex: 1 1 auto;
 }
 .g {
-  color: blue;
+  color: #0d80bf;
 }
 .r {
-  color: black;
+  color: #1f1a17;
 }
 .e {
-  color: blue;
+  color: #0d80bf;
 }
 .m {
-  color: black;
+  color: 1f1a17;
 }
 .i {
-  color: blue;
+  color: #0d80bf;
 }
 .o {
-  color: black;
+  color: 1f1a17;
 }
 
 .custom-icon {

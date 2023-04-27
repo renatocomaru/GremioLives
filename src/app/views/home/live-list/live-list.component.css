@@ -49,3 +49,15 @@
 .mat-card-title-live p {
   margin-bottom: 0px;
 }
+
+.mat-card-title-live .mat-chip-date {
+  background-color: #0d80bf;
+}
+
+.mat-card-title-live .mat-chip-date span {
+  color: white;
+}
+
+.liveTitle {
+  color: #0d80bf;
+}

@@ -22,17 +22,19 @@ export class LiveListComponent implements OnInit {
   }
 
   getLives() {
-    this.liveService.getLivesWithFlag('previous').subscribe((data) => {
-      this.livesPrevious = data.content;
-      console.log(this.livesPrevious);
-      this.livesPrevious.forEach((live) => {
-        live.urlSafe = this.sanitizer.bypassSecurityTrustResourceUrl(
-          live.liveLink + '?origin=' + window.location.origin
-        );
+    this.liveService
+      .getLivesWithFlag({ flag: 'previous' })
+      .subscribe((data) => {
+        this.livesPrevious = data.content;
+        console.log(this.livesPrevious);
+        this.livesPrevious.forEach((live) => {
+          live.urlSafe = this.sanitizer.bypassSecurityTrustResourceUrl(
+            live.liveLink + '?origin=' + window.location.origin
+          );
+        });
       });
-    });
 
-    this.liveService.getLivesWithFlag('next').subscribe((data) => {
+    this.liveService.getLivesWithFlag({ flag: 'next' }).subscribe((data) => {
       this.livesNext = data.content;
       console.log(this.livesNext);
       this.livesNext.forEach((live) => {
