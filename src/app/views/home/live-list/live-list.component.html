@@ -9,7 +9,8 @@
                 <span class="liveTitle" style="font-size: 1rem;" fxFlex="70"
                   fxLayoutAlign="start center">{{live.liveName}}</span>
                 <span fxFlex></span>
-                <mat-chip class="mat-chip-date" fxFlex="25" fxLayoutAlign="center center">
+                <mat-chip class="mat-chip-date" matAutosize matTooltip="{{live.liveDate | localDateTime}}"
+                  fxLayoutAlign="center center">
                   <span style="font-size: 0.7rem;">{{live.liveDate |
                     localDateTime}}</span>
                 </mat-chip>
@@ -37,13 +38,14 @@
                 <span class="liveTitle" style="font-size: 1rem;" fxFlex="70"
                   fxLayoutAlign="start center">{{live.liveName}}</span>
                 <span fxFlex></span>
-                <mat-chip class="mat-chip-date" fxFlex="25" fxLayoutAlign="center center">
+                <mat-chip class="mat-chip-date" matAutosize matTooltip="{{live.liveDate | localDateTime}}"
+                  fxLayoutAlign="center center">
                   <span style="font-size: 0.7rem;">{{live.liveDate |
                     localDateTime}}</span>
                 </mat-chip>
               </p>
               <p style="font-size: 0.7rem;">
-                Canal:<span>{{live.channelName}}</span>
+                Canal: <span>{{live.channelName}}</span>
               </p>
             </div>
           </mat-card-title>

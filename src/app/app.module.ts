@@ -21,6 +21,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatNativeDateModule } from '@angular/material/core';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import { MatNativeDateModule } from '@angular/material/core';
     FormsModule,
     MatNativeDateModule,
     ReactiveFormsModule,
+    MatTooltipModule,
   ],
   providers: [LocalDateTimePipe],
   bootstrap: [AppComponent],
