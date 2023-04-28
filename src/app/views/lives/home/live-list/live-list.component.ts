@@ -11,6 +11,8 @@ import { LiveService } from 'src/app/shared/service/live.service';
 export class LiveListComponent implements OnInit {
   livesPrevious: Live[];
   livesNext: Live[];
+  next: boolean = false;
+  previous: boolean = false;
 
   constructor(
     public liveService: LiveService,
@@ -32,6 +34,7 @@ export class LiveListComponent implements OnInit {
             live.liveLink + '?origin=' + window.location.origin
           );
         });
+        this.previous = true;
       });
 
     this.liveService.getLivesWithFlag({ flag: 'next' }).subscribe((data) => {
@@ -42,6 +45,7 @@ export class LiveListComponent implements OnInit {
           live.liveLink + '?origin=' + window.location.origin
         );
       });
+      this.next = true;
     });
   }
 }

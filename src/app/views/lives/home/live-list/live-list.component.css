@@ -69,3 +69,7 @@
   text-overflow: ellipsis;
   max-width: 100%;
 }
+
+::ng-deep .custom-tab-group .mat-tab-label.mat-tab-label-active {
+  color: #0d80bf !important;
+}
