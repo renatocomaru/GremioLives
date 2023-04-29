@@ -22,6 +22,3 @@ Contributions are welcome! Please feel free to submit issues or create pull requ
 
 ## License
 This project is licensed under the MIT License.
-
-## About Me
-I'm a passionate web developer with experience in Angular and Material Design. I love creating user-friendly applications and contributing to open-source projects. GremioLives is a project close to my heart, as I'm a big fan of the Gremio football club.
