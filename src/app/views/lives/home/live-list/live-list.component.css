@@ -17,7 +17,7 @@
   }
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1910x) {
   .flexDiv {
     grid-template-columns: repeat(auto-fill, minmax(48%, 1fr));
   }
@@ -30,7 +30,7 @@
 .mat-card-live {
   border: 1px;
   border-radius: 4px 3px 6px / 2px 4px;
-  padding-top: 15px;
+  /* padding-top: 15px; */
   padding-left: 0%;
   padding-right: 0%;
   padding-bottom: 0%;
@@ -60,6 +60,7 @@
 
 .liveTitle {
   color: #0d80bf;
+  flex-grow: 1;
 }
 
 .mat-chip.mat-chip-date {
@@ -72,4 +73,17 @@
 
 ::ng-deep .custom-tab-group .mat-tab-label.mat-tab-label-active {
   color: #0d80bf !important;
+}
+
+.chips-wrap {
+}
+
+.mat-card-title-live {
+  /* display: flex; */
+  align-items: center;
+  padding-left: 10px;
+  padding-top: 0px;
+  padding-right: 15px;
+  margin-bottom: 0px !important;
+  min-height: 70px;
 }

@@ -2,6 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { Live } from 'src/app/shared/model/live.model';
 import { LiveService } from 'src/app/shared/service/live.service';
+import { MatDialog } from '@angular/material/dialog';
+import { LiveEditDialogComponent } from '../live-edit-dialog/live-edit-dialog.component';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { ConfirmDialogComponent } from '../confirm-dialog/confirm-dialog.component';
 
 @Component({
   selector: 'app-live-list',
@@ -16,7 +20,9 @@ export class LiveListComponent implements OnInit {
 
   constructor(
     public liveService: LiveService,
-    public sanitizer: DomSanitizer
+    public sanitizer: DomSanitizer,
+    public dialog: MatDialog,
+    private snackBar: MatSnackBar
   ) {}
 
   ngOnInit(): void {
@@ -46,6 +52,64 @@ export class LiveListComponent implements OnInit {
         );
       });
       this.next = true;
+    });
+  }
+
+  editLive(live: Live): void {
+    const dialogRef = this.dialog.open(LiveEditDialogComponent, {
+      minWidth: '400px',
+      data: { live: live },
+    });
+
+    dialogRef.afterClosed().subscribe((result) => {
+      console.log('The dialog was closed');
+    });
+  }
+
+  // Método para deletar live
+  deleteLive(live: Live): void {
+    console.log(live.id);
+    const dialogRef = this.dialog.open(ConfirmDialogComponent, {
+      data: {
+        message: `Tem certeza de que deseja deletar a live "${live.liveName}"?`,
+      },
+    });
+
+    dialogRef.afterClosed().subscribe((result) => {
+      if (result) {
+        this.liveService.deleteLive(live.id).subscribe(
+          () => {
+            // Atualiza a lista de lives
+            this.snackBar.open('Live deletada com sucesso', 'Fechar', {
+              duration: 3000,
+            });
+            // Atualiza a lista de lives após deleção
+            this.getLives();
+            window.location.reload();
+          },
+          (error) => {
+            // Erro ao deletar live
+            this.snackBar.open(
+              'Erro ao deletar live. Por favor, tente novamente.',
+              'Fechar',
+              {
+                duration: 3000,
+              }
+            );
+          }
+        );
+      }
+    });
+    this.snackBar.open('Live deletada com sucesso', 'Fechar', {
+      duration: 3000,
+    });
+  }
+
+  // Método para compartilhar live
+  shareLive(live: Live): void {
+    // Implemente a lógica de compartilhamento de live aqui.
+    this.snackBar.open('Link da live copiado', 'Fechar', {
+      duration: 3000,
     });
   }
 }

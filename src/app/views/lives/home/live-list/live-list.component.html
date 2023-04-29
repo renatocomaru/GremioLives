@@ -3,23 +3,50 @@
     <mat-progress-bar *ngIf="!next" mode="indeterminate"></mat-progress-bar>
     <div *ngIf="next" class="flexDiv">
       <ng-container *ngFor="let live of livesNext" class="grid-item">
-        <mat-card class="mat-card-live">
+        <mat-card class="mat-card-live" style="padding-top: 10px;">
           <mat-card-title class="mat-card-title-live">
-            <div class="row">
-              <p>
-                <span class="liveTitle" style="font-size: 1rem;" fxFlex="70"
-                  fxLayoutAlign="start center">{{live.liveName}}</span>
-                <span fxFlex></span>
+
+            <p style="align-items: center; justify-content: space-between;">
+              <span class="liveTitle" style="font-size: 1rem;" fxFlex="70" fxLayoutAlign="start center">
+                {{live.liveName}}
+              </span>
+              <span fxFlex>
+              </span>
+              <span style="margin-left: 10px;">
                 <mat-chip class="mat-chip-date" matAutosize matTooltip="{{live.liveDate | localDateTime}}"
                   fxLayoutAlign="center center">
-                  <span style="font-size: 0.7rem;">{{live.liveDate |
-                    localDateTime}}</span>
+                  <span style="font-size: 0.7rem;">
+                    {{live.liveDate |
+                    localDateTime}}
+                  </span>
                 </mat-chip>
-              </p>
-              <p style="font-size: 0.7rem;">
-                Canal:<span>{{live.channelName}}</span>
-              </p>
-            </div>
+              </span>
+              <span class="chips-wrap" style="margin-left: 10px;">
+                <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Opções da live">
+                  <mat-icon>more_vert</mat-icon>
+                </button>
+                <mat-menu #menu="matMenu">
+                  <button mat-menu-item (click)="editLive(live)">
+                    <mat-icon>edit</mat-icon>
+                    <span>Editar</span>
+                  </button>
+                  <button mat-menu-item (click)="deleteLive(live)">
+                    <mat-icon>delete</mat-icon>
+                    <span>Deletar</span>
+                  </button>
+                  <button mat-menu-item (click)="shareLive(live)">
+                    <mat-icon>share</mat-icon>
+                    <span>Compartilhar</span>
+                  </button>
+                </mat-menu>
+              </span>
+            </p>
+            <p style="font-size: 0.7rem;">
+              <span>
+                Canal: {{live.channelName}}
+              </span>
+            </p>
+
           </mat-card-title>
           <mat-card-content fxLayoutAlign="center start">
             <iFrame width="560" height="315" [src]="live.urlSafe" frameborder="0"
@@ -30,26 +57,53 @@
     </div>
   </mat-tab>
   <mat-tab label="REALIZADAS">
-    <mat-progress-bar *ngIf="!previous" mode="indeterminate"></mat-progress-bar>
-    <div *ngIf="previous" class=" flexDiv">
+    <mat-progress-bar *ngIf="!next" mode="indeterminate"></mat-progress-bar>
+    <div *ngIf="next" class="flexDiv">
       <ng-container *ngFor="let live of livesPrevious" class="grid-item">
         <mat-card class="mat-card-live">
           <mat-card-title class="mat-card-title-live">
-            <div class="row">
-              <p>
-                <span class="liveTitle" style="font-size: 1rem;" fxFlex="70"
-                  fxLayoutAlign="start center">{{live.liveName}}</span>
-                <span fxFlex></span>
+
+            <p style="align-items: center; justify-content: space-between;">
+              <span class="liveTitle" style="font-size: 1rem;" fxFlex="70" fxLayoutAlign="start center">
+                {{live.liveName}}
+              </span>
+              <span fxFlex>
+              </span>
+              <span style="margin-left: 10px;">
                 <mat-chip class="mat-chip-date" matAutosize matTooltip="{{live.liveDate | localDateTime}}"
                   fxLayoutAlign="center center">
-                  <span style="font-size: 0.7rem;">{{live.liveDate |
-                    localDateTime}}</span>
+                  <span style="font-size: 0.7rem;">
+                    {{live.liveDate |
+                    localDateTime}}
+                  </span>
                 </mat-chip>
-              </p>
-              <p style="font-size: 0.7rem;">
-                Canal: <span>{{live.channelName}}</span>
-              </p>
-            </div>
+              </span>
+              <span class="chips-wrap" style="margin-left: 10px;">
+                <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Opções da live">
+                  <mat-icon>more_vert</mat-icon>
+                </button>
+                <mat-menu #menu="matMenu">
+                  <button mat-menu-item (click)="editLive(live)">
+                    <mat-icon>edit</mat-icon>
+                    <span>Editar</span>
+                  </button>
+                  <button mat-menu-item (click)="deleteLive(live)">
+                    <mat-icon>delete</mat-icon>
+                    <span>Deletar</span>
+                  </button>
+                  <button mat-menu-item (click)="shareLive(live)">
+                    <mat-icon>share</mat-icon>
+                    <span>Compartilhar</span>
+                  </button>
+                </mat-menu>
+              </span>
+            </p>
+            <p style="font-size: 0.7rem;">
+              <span>
+                Canal: {{live.channelName}}
+              </span>
+            </p>
+
           </mat-card-title>
           <mat-card-content fxLayoutAlign="center start">
             <iFrame width="560" height="315" [src]="live.urlSafe" frameborder="0"

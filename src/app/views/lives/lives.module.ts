@@ -22,6 +22,10 @@ import { LiveListComponent } from './home/live-list/live-list.component';
 import { LiveFormDialogComponent } from './home/live-form-dialog/live-form-dialog.component';
 import { LocalDateTimePipe } from 'src/app/shared/pipe/local-date-time.pipe';
 import { AppComponent } from 'src/app/app.component';
+import { LiveEditDialogComponent } from './home/live-edit-dialog/live-edit-dialog.component';
+import { MatMenuModule } from '@angular/material/menu';
+import { ConfirmDialogComponent } from './home/confirm-dialog/confirm-dialog.component';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -29,6 +33,8 @@ import { AppComponent } from 'src/app/app.component';
     LiveListComponent,
     LiveFormDialogComponent,
     LocalDateTimePipe,
+    LiveEditDialogComponent,
+    ConfirmDialogComponent,
   ],
   imports: [
     CommonModule,
@@ -50,6 +56,8 @@ import { AppComponent } from 'src/app/app.component';
     MatFormFieldModule,
     MatDatepickerModule,
     MatProgressBarModule,
+    MatMenuModule,
+    MatSnackBarModule,
   ],
   providers: [LocalDateTimePipe],
   bootstrap: [AppComponent],

@@ -1,10 +1,10 @@
-<div class="dialog-form-wrap">
-  <div class="header-form">
-    <h1 class="form-title" style="color:#0d80bf" mat-dialog-title>Adicionar nova Live</h1>
+<div class="dialog-edit-wrap">
+  <div class="header-edit">
+    <h1 class="edit-title" style="color: #0d80bf" mat-dialog-title>Editar Live</h1>
     <img class="custom-icon" src="assets/icons/gremio.svg" alt="Gremio Logo">
   </div>
   <div mat-dialog-content>
-    <form class="example-form" [formGroup]="liveForm">
+    <form class="example-edit" [formGroup]="liveForm">
       <mat-form-field class="example-full-width">
         <mat-label>Nome da Live</mat-label>
         <input matInput formControlName="liveName" name="liveName">
@@ -37,11 +37,10 @@
           </mat-form-field>
         </div>
       </div>
-
     </form>
   </div>
-  <div class="form-buttons" mat-dialog-actions>
-    <button mat-raised-button style="background-color: #0d80bf;" (click)="saveLive()">Adicionar</button>
-    <button mat-button style="background-color: gray;" (click)="cancel()">Cancelar</button>
-  </div>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="cancel()">Cancelar</button>
+  <button mat-raised-button style="background-color:#0d80bf;" (click)="saveChanges()">Salvar</button>
 </div>
